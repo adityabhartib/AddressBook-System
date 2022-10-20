@@ -12,7 +12,7 @@ public class AddressBookMain {
         //Show Menu for user to Select Operation on AddressBook
         do {
             System.out.println("1. Add New Contact\n2. Edit Contact\n3. Delete Contact" + "\n4. Display Contact\n5. Exit");
-            System.out.println("Enter Choise: ");
+            System.out.println("Enter Choice: ");
             choice = addressBook.sc.nextInt();
 
             switch (choice) {
@@ -35,7 +35,7 @@ public class AddressBookMain {
                     System.out.println("Please Select between 1 to 5 only.");
                     break;
             }
-        }while( choice != 5 );
-
+        }
+        while( choice != 5 );
     }
 }

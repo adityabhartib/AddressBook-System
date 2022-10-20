@@ -53,7 +53,7 @@ public class AddressBook {
         String firstName = sc.next();
 
         //check if the Given User with First Name
-        if(!firstName.equals(contacts.getFirstname())) {
+        if(!firstName.equalsIgnoreCase(contacts.getFirstname())) {
             System.out.println("The Entered Contact Name is Not Available in Address Book");
         } else {
             System.out.println("Match Found--------!!!!");
@@ -75,7 +75,7 @@ public class AddressBook {
             System.out.println("Enter the EMail ID :");
             contacts.setEmail(sc.next());
             System.out.println("-------------------------------");
-            System.out.println("Contact Update Succesfully-----!!");
+            System.out.println("Contact Update Successfully-----!!");
         }
     }
     public void deleteContact(){
@@ -84,7 +84,7 @@ public class AddressBook {
         String firstName = sc.next();
 
         //check if the Given User with First Name
-        if(!firstName.equals(contacts.getFirstname())) {
+        if(!firstName.equalsIgnoreCase(contacts.getFirstname())) {
             System.out.println("The Entered Contact Name is Not Available in Address Book");
         } else {
             contacts.setFirstname(null);

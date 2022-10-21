@@ -35,6 +35,10 @@ public class AddressBook {
 
     //Method to Show the Contact Details
     public void displayContact() {
+        if(contacts.getFirstname()==null) {
+            System.out.println("No Contact Found------!!!!!!!!!");
+            System.out.println("---------------------------------");
+        } else{
         System.out.println("--------------------------------------------");
         System.out.println("Contact Details :-");
         System.out.println("Name : "+contacts.getFirstname()+" "+contacts.getLastname());
@@ -44,7 +48,7 @@ public class AddressBook {
         System.out.println("PIN Code : "+contacts.getPin());
         System.out.println("Phone Number : "+contacts.getPhonenumber());
         System.out.println("EMail ID : "+contacts.getEmail());
-        System.out.println("---------------------------------------------");
+        System.out.println("---------------------------------------------");}
     }
     //Method to Edit the Existing Contact
     public void editContact() {
@@ -95,7 +99,7 @@ public class AddressBook {
             contacts.setPin(0);
             contacts.setPhonenumber(0);
             contacts.setEmail(null);
-            System.out.println("Contact Deleted Successfully-------!!1");
+            System.out.println("Contact Deleted Successfully-------!!!");
         }
     }
 }

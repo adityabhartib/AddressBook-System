@@ -11,7 +11,7 @@ public class AddressBookMain {
             System.out.println("Enter Choice: ");
             choice = addressBook.sc.nextInt();
 
-            switch (choice) {
+        switch (choice) {
                 case 1:
                     addressBook.addNewContact();
                     break;

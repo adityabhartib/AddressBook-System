@@ -63,14 +63,6 @@ public class AddressBook {
             System.out.println("The Entered Contact Name is Not Available in Address Book");
         }
     }
-
-    @Override
-    public String toString() {
-        return "AddressBook{" +
-                "newlist=" + newlist +
-                '}';
-    }
-
     public void deleteContact() {
         System.out.println("Enter the First Name : ");
         String firstName = sc.next();

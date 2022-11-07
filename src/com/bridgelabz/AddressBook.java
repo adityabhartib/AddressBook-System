@@ -6,59 +6,65 @@ import java.util.Scanner;
 public class AddressBook {
     Scanner sc = new Scanner(System.in);
 
-    ArrayList<String> newlist = new ArrayList<>();
+    ArrayList<Contacts>list = new ArrayList<>();
 
     public void addNewContact() {
+        Contacts contacts=new Contacts();
         System.out.println("----------------------------------");
         System.out.println("Enter the Contact Details :-");
         System.out.println("Enter the First Name :");
-        newlist.add(sc.next());
+        contacts.setFirstname(sc.next());
         System.out.println("Enter the Last Name :");
-        newlist.add(sc.next());
+        contacts.setLastname(sc.next());
         System.out.println("Enter the Address :");
-        newlist.add(sc.next());
+        contacts.setAddress(sc.next());
         System.out.println("Enter the City :");
-        newlist.add(sc.next());
+        contacts.setCity(sc.next());
         System.out.println("Enter the State :");
-        newlist.add(sc.next());
+        contacts.setState(sc.next());
         System.out.println("Enter the PIN Code :");
-        newlist.add(sc.next());
+        contacts.setPin(sc.next());
         System.out.println("Enter the Phone Number :");
-        newlist.add(sc.next());
+        contacts.setPhonenumber(sc.next());
         System.out.println("Enter the EMail ID :");
-        newlist.add(sc.next());
+        contacts.setEmail(sc.next());
         System.out.println("Contacts Added Successfully------!!!");
         System.out.println("-----------------------------------------");
+        list.add(contacts);
     }
 
     public void displayContact() {
-        System.out.println(newlist);
+        for (Contacts cont:list) {
+            System.out.println(cont);
+        }
     }
 
     public void editContact() {
+        Contacts contacts=new Contacts();
         System.out.println("Enter the First Name : ");
         String firstName = sc.next();
-        if (newlist.contains(firstName)) {
+        if (list.contains(firstName)) {
             System.out.println("Match Found--------!!!!");
             System.out.println("-----------------------");
             System.out.println("Enter the First Name :");
-            newlist.add(sc.next());
+            contacts.setFirstname(sc.next());
             System.out.println("Enter the Last Name :");
-            newlist.add(sc.next());
+            contacts.setLastname(sc.next());
             System.out.println("Enter the Address :");
-            newlist.add(sc.next());
+            contacts.setAddress(sc.next());
             System.out.println("Enter the City :");
-            newlist.add(sc.next());
+            contacts.setCity(sc.next());
             System.out.println("Enter the State :");
-            newlist.add(sc.next());
+            contacts.setState(sc.next());
             System.out.println("Enter the PIN Code :");
-            newlist.add(sc.next());
+            contacts.setPin(sc.next());
             System.out.println("Enter the Phone Number :");
-            newlist.add(sc.next());
+            contacts.setPhonenumber(sc.next());
             System.out.println("Enter the EMail ID :");
-            newlist.add(sc.next());
+            contacts.setEmail(sc.next());
             System.out.println("-------------------------------");
             System.out.println("Contact Update Successfully-----!!");
+            list.add(contacts);
         } else {
             System.out.println("The Entered Contact Name is Not Available in Address Book");
         }
@@ -66,8 +72,8 @@ public class AddressBook {
     public void deleteContact() {
         System.out.println("Enter the First Name : ");
         String firstName = sc.next();
-        if (newlist.contains(firstName)) {
-            newlist.remove(firstName);
+        if (list.contains(firstName)) {
+            list.remove(firstName);
             System.out.println("Contact Deleted Successfully-------!!!");
 
         }

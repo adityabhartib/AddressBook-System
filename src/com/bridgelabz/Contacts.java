@@ -76,14 +76,14 @@ public class Contacts {
 
     @Override
     public String toString() {
-        return "Contacts Details :" +'\n'+
-                "Firstname :" + firstname + '\n' +
-                "Lastname :" + lastname + '\n'+
-                "Address :" + Address + '\n' +
-                "City :" + city + '\n' +
-                "State :" + state + '\n' +
-                "Pin :" + Pin +'\n'+
-                "PhoneNumber :" + phonenumber +'\n'+
+        return "Contacts Details :" +"\n"+
+                "Firstname :" + firstname +","+
+                "Lastname :" + lastname + ','+
+                "Address :" + Address + ',' +
+                "City :" + city + ',' +
+                "State :" + state + ',' +
+                "Pin :" + Pin +','+
+                "PhoneNumber :" + phonenumber +','+
                 "Email :" + email ;
     }
 }

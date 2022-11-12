@@ -1,15 +1,17 @@
 package com.bridgelabz;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class AddressBook {
     Scanner sc = new Scanner(System.in);
+    Contacts contacts;
 
     ArrayList<Contacts>list = new ArrayList<>();
 
     public void addNewContact() {
-        Contacts contacts=new Contacts();
+        contacts=new Contacts();
         System.out.println("----------------------------------");
         System.out.println("Enter the Contact Details :-");
         System.out.println("Enter the First Name :");
@@ -34,16 +36,19 @@ public class AddressBook {
     }
 
     public void displayContact() {
-        for (Contacts cont:list) {
-            System.out.println(cont);
+        if (contacts.getFirstname() == null) {
+            System.out.println("Contact Not Found");
+        } else {
+            for (Contacts cont : list) {
+                System.out.println(cont);
+            }
         }
     }
-
     public void editContact() {
-        Contacts contacts=new Contacts();
+        contacts=new Contacts();
         System.out.println("Enter the First Name : ");
         String firstName = sc.next();
-        if (list.contains(firstName)) {
+        if (firstName.equalsIgnoreCase(contacts.getFirstname())) {
             System.out.println("Match Found--------!!!!");
             System.out.println("-----------------------");
             System.out.println("Enter the First Name :");
@@ -72,10 +77,11 @@ public class AddressBook {
     public void deleteContact() {
         System.out.println("Enter the First Name : ");
         String firstName = sc.next();
-        if (list.contains(firstName)) {
-            list.remove(firstName);
+        if (firstName.equalsIgnoreCase(contacts.getFirstname())) {
+            list.remove(contacts);
             System.out.println("Contact Deleted Successfully-------!!!");
-
+        }else {
+            System.out.println("Not Found");
         }
     }
 }

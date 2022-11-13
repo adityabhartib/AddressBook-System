@@ -11,7 +11,7 @@ public class AddressBook {
     ArrayList<Contacts>list = new ArrayList<>();
 
     public void addNewContact() {
-        contacts=new Contacts();
+        contacts = new Contacts();
         System.out.println("----------------------------------");
         System.out.println("Enter the Contact Details :-");
         System.out.println("Enter the First Name :");
@@ -33,6 +33,34 @@ public class AddressBook {
         System.out.println("Contacts Added Successfully------!!!");
         System.out.println("-----------------------------------------");
         list.add(contacts);
+        System.out.println("Enter First Name :");
+        String firstName = sc.next();
+        if (contacts.getFirstname().equalsIgnoreCase(firstName)) {
+            System.out.println("Name already Exist----!!");
+        } else {
+            contacts = new Contacts();
+            System.out.println("----------------------------------");
+            System.out.println("Enter the Contact Details :-");
+            System.out.println("Enter the First Name :");
+            contacts.setFirstname(sc.next());
+            System.out.println("Enter the Last Name :");
+            contacts.setLastname(sc.next());
+            System.out.println("Enter the Address :");
+            contacts.setAddress(sc.next());
+            System.out.println("Enter the City :");
+            contacts.setCity(sc.next());
+            System.out.println("Enter the State :");
+            contacts.setState(sc.next());
+            System.out.println("Enter the PIN Code :");
+            contacts.setPin(sc.next());
+            System.out.println("Enter the Phone Number :");
+            contacts.setPhonenumber(sc.next());
+            System.out.println("Enter the EMail ID :");
+            contacts.setEmail(sc.next());
+            System.out.println("Contacts Added Successfully------!!!");
+            System.out.println("-----------------------------------------");
+            list.add(contacts);
+        }
     }
 
     public void displayContact() {
